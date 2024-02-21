@@ -13,11 +13,8 @@ import java.time.Duration;
 public class DriverHelper {
     private static WebDriver driver;
     private DriverHelper(){};
-    //I make my constructor private because I do not want anyone to create an object
-    // and manipulate my driver from this class
     public static WebDriver getDriver(){
         if(driver==null||((RemoteWebDriver)driver).getSessionId()==null){
-            //  String browser="chrome";
             switch (ConfigReader.readProperty("browser")){
                 case"chrome":
                     WebDriverManager.chromedriver().setup();
