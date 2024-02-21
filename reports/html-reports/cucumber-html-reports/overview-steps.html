@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>OpenMRS-Cucumber-Report</td>
+        <td>1</td>
+      <td>20 Feb 2024, 14:18</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.test.saucedemo.stepdefinitions.Hook.setup()</td>
+              <td>4</td>
+              <td class="duration" data-value="1173148075">1.173</td>
+              <td class="duration" data-value="1173148075">4.580</td>
+              <td class="duration" data-value="4692592300">4.692</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.test.saucedemo.stepdefinitions.Hook.tearDown(io.cucumber.java.Scenario)</td>
+              <td>4</td>
+              <td class="duration" data-value="522875">0.000</td>
+              <td class="duration" data-value="522875">0.001</td>
+              <td class="duration" data-value="2091500">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.test.saucedemo.stepdefinitions.OrderStepDef.userChooseTheClickAddToCartButtonAndValidateItIsAdded(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="164395175">0.164</td>
+              <td class="duration" data-value="164395175">0.189</td>
+              <td class="duration" data-value="657580700">0.657</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.test.saucedemo.stepdefinitions.OrderStepDef.userClickCartIconAndCheckoutButton()</td>
+              <td>4</td>
+              <td class="duration" data-value="108780525">0.108</td>
+              <td class="duration" data-value="108780525">0.134</td>
+              <td class="duration" data-value="435122100">0.435</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.test.saucedemo.stepdefinitions.OrderStepDef.userClickFinishButtonAndValidateForPurchase(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="46237400">0.046</td>
+              <td class="duration" data-value="46237400">0.058</td>
+              <td class="duration" data-value="184949600">0.184</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.test.saucedemo.stepdefinitions.OrderStepDef.userProvideUsernameAndPasswordToLoginSuccessfully()</td>
+              <td>4</td>
+              <td class="duration" data-value="224218600">0.224</td>
+              <td class="duration" data-value="224218600">0.296</td>
+              <td class="duration" data-value="896874400">0.896</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.test.saucedemo.stepdefinitions.OrderStepDef.userProvidesToCheckoutPageAndClickContinueButton(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="205495600">0.205</td>
+              <td class="duration" data-value="205495600">0.224</td>
+              <td class="duration" data-value="821982400">0.821</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.test.saucedemo.stepdefinitions.OrderStepDef.userValidateTheWithTaxRate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="87303850">0.087</td>
+              <td class="duration" data-value="87303850">0.105</td>
+              <td class="duration" data-value="349215400">0.349</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>8</td>
+            <td>32</td>
+            <td class="duration">0.251</td>
+            <td class="duration">4.692</td>
+            <td class="duration">8.040</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
