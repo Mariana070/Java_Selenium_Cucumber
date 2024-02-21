@@ -15,13 +15,13 @@ public class CheckOutPage {
         PageFactory.initElements(driver,this);
     }
     @FindBy(css = "#first-name")
-    public WebElement firstName;
+    private WebElement firstName;
     @FindBy(css = "#last-name")
-    public WebElement lastName;
+    private WebElement lastName;
     @FindBy(css = "#postal-code")
-    public  WebElement zipCode;
+    private  WebElement zipCode;
     @FindBy(css = "#continue")
-    public WebElement continueButton;
+    private WebElement continueButton;
     @FindBy(css = ".inventory_item_name")
     private WebElement productName;
     @FindBy(css = ".summary_subtotal_label")

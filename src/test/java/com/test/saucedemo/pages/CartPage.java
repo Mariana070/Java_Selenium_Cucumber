@@ -10,7 +10,7 @@ public class CartPage {
         PageFactory.initElements(driver,this);
     }
     @FindBy(css = "#checkout")
-    public WebElement checkOutButton;
+    private WebElement checkOutButton;
     public void clickCheckoutButton(){
         checkOutButton.click();
     }
