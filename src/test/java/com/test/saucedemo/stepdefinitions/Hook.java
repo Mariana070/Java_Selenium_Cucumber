@@ -19,7 +19,7 @@ public class Hook {
     @After
     public void tearDown(Scenario scenario){
         BrowserUtils.getScreenShortForCucumber(driver,scenario);
-       //driver.quit();
+       driver.quit();
     }
 
 }
